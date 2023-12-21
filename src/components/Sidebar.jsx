@@ -1,16 +1,15 @@
 import PropTypes from "prop-types";
 import MingleIcon from "../assets/mingle-icon.png";
-import styles from "./Sidebar.module.css";
 
 const Sidebar = ({ selectedTab, setSelectedTab }) => {
   return (
     <div
       className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
-      style={{ width: "280px", height: "100vh" }}>
+      style={{ width: "200px", height: "100vh" }}>
       <a
         href="/"
         className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        <img src={MingleIcon} alt="mingle-logo" className={styles.logo} />
+        <img src={MingleIcon} alt="mingle-logo" className="logo" />
         <span className="fs-4">Mingle</span>
       </a>
       <hr />

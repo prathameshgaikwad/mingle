@@ -7,6 +7,25 @@ export const PostList = createContext({
   deletePost: () => {},
 });
 
+const DEFAULT_POST_LIST = [
+  {
+    id: "1",
+    title: "Going to Mumbai",
+    body: "Hi Friends, I am going to Mumbai for my vacations. Hope to enjoy a lot. Peace out.",
+    reactions: 2,
+    userId: "user-9",
+    tags: ["vacation", "Mumbai", "Enjoying"],
+  },
+  {
+    id: "3",
+    title: "Exploring the Wilderness",
+    body: "Venturing into the wild for some thrilling adventures. Can't wait to embrace nature!",
+    reactions: 8,
+    userId: "user-5",
+    tags: ["Adventure", "Nature", "Thrill"],
+  },
+];
+
 const postListReducer = (currPostList, action) => {
   let newPostList = currPostList;
 
@@ -14,6 +33,8 @@ const postListReducer = (currPostList, action) => {
     newPostList = currPostList.filter(
       (post) => post.id !== action.payload.postId
     );
+  } else if (action.type === "ADD_POST") {
+    newPostList = [action.payload, ...currPostList];
   }
   return newPostList;
 };
@@ -24,7 +45,19 @@ const PostListProvider = ({ children }) => {
     DEFAULT_POST_LIST
   );
 
-  const addPost = () => {};
+  const addPost = (userId, postTitle, postBody, reactions, tags) => {
+    dispatchPostList({
+      type: "ADD_POST",
+      payload: {
+        id: Date.now(),
+        userId: userId,
+        title: postTitle,
+        body: postBody,
+        reactions,
+        tags,
+      },
+    });
+  };
 
   const deletePost = (postId) => {
     dispatchPostList({
@@ -41,25 +74,6 @@ const PostListProvider = ({ children }) => {
     </PostList.Provider>
   );
 };
-
-const DEFAULT_POST_LIST = [
-  {
-    id: "1",
-    title: "Going to Mumbai",
-    body: "Hi Friends, I am going to Mumbai for my vacations. Hope to enjoy a lot. Peace out.",
-    reactions: 2,
-    userId: "user-9",
-    tags: ["vacation", "Mumbai", "Enjoying"],
-  },
-  {
-    id: "2",
-    title: "Paas ho bhai",
-    body: "4 saal ki masti k baad bhi ho gaye hain paas. Hard to believe.",
-    reactions: 15,
-    userId: "user-12",
-    tags: ["Graduating", "Unbelievable"],
-  },
-];
 
 PostListProvider.propTypes = {
   children: PropTypes.node.isRequired,
