@@ -1,11 +1,13 @@
 import PropTypes from "prop-types";
 import MingleIcon from "../assets/mingle-icon.png";
+import { FiHome } from "react-icons/fi";
+import { CgAdd } from "react-icons/cg";
 
 const Sidebar = ({ selectedTab, setSelectedTab }) => {
   return (
     <div
       className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
-      style={{ width: "200px", height: "100vh" }}>
+      style={{ width: "220px", height: "100vh", position: "sticky", top: "0" }}>
       <a
         href="/"
         className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -21,9 +23,7 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
               selectedTab === "Home" && "active"
             }`}
             aria-current="page">
-            <svg className="bi pe-none me-2" width="16" height="16">
-              <use xlinkHref="#home"></use>
-            </svg>
+            <FiHome />
             Home
           </a>
         </li>
@@ -33,9 +33,7 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
             className={`nav-link text-white ${
               selectedTab === "Create Post" && "active"
             }`}>
-            <svg className="bi pe-none me-2" width="16" height="16">
-              <use xlinkHref="#speedometer2"></use>
-            </svg>
+            <CgAdd />
             Create Post
           </a>
         </li>

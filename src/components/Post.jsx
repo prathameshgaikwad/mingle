@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useContext } from "react";
 import { TiDelete } from "react-icons/ti";
 import { PostList } from "../store/post-list-store";
+import { FaRegHeart } from "react-icons/fa";
 
 const Post = ({ post }) => {
   const { deletePost } = useContext(PostList);
@@ -22,9 +23,10 @@ const Post = ({ post }) => {
           </span>
         ))}
         <div
-          className="alert alert-success"
+          className="alert alert-success reactions"
           role="alert"
           style={{ marginTop: "2rem" }}>
+          <FaRegHeart className="like-icon" />
           {post.reactions} Reactions
         </div>
       </div>
