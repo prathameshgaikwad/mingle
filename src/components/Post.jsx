@@ -8,7 +8,7 @@ const Post = ({ post }) => {
   const { deletePost } = useContext(PostList);
 
   return (
-    <div className="card post" style={{ width: "50%" }}>
+    <div className="card post">
       <div className="card-body">
         <span
           className="position-absolute top-0 start-100 translate-middle bg-danger border border-light rounded-circle  delete-container"
