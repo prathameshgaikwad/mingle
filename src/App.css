@@ -6,6 +6,10 @@
   --secondary-white: #e6e6e6;
 }
 
+* {
+  font-family: "Inter", sans-serif;
+}
+
 /* App ----------------------------------------------------------------------------------- */
 
 .app-container {
@@ -31,8 +35,8 @@
 }
 
 .circle {
-  height: 30px;
-  width: 30px;
+  height: 26px;
+  width: 26px;
   border: 3px solid var(--primary-white);
   border-radius: 50%;
 }
@@ -82,12 +86,17 @@
   font-size: 21px;
 }
 
+.card-title {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
 .post {
   margin: 30px auto;
   box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.1),
     0px 50px 100px -20px rgba(50, 50, 93, 0.25),
     0px 30px 60px -30px rgba(0, 0, 0, 0.3);
-  padding: 8px;
+  padding: 12px;
   width: 50%;
 }
 
@@ -131,11 +140,9 @@
 
 .footer {
   background-color: #212529;
-  position: relative;
-  bottom: 0;
 }
 
 .copyright {
-  color: whitesmoke !important;
+  color: var(--primary-white) !important;
   font-size: 1.2rem;
 }
