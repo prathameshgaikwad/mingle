@@ -1,27 +1,82 @@
+:root {
+  --main-black: #060a19;
+  --primary: #111a41;
+  --secondary: #1c2a69;
+  --primary-white: #fff;
+  --secondary-white: #e6e6e6;
+}
+
+/* App ----------------------------------------------------------------------------------- */
+
 .app-container {
   display: flex;
   min-height: 100vh;
-}
-
-.logo {
-  height: 36px;
-  border-radius: 10px;
-  margin-right: 10px;
-}
-
-.nav-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .content {
   width: 100%;
 }
 
+/* Sidebar ---------------------------------------------------------------------------------- */
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Mingle Logo ---------------------------------------------------------------------------------- */
+
+.logo-container {
+  display: flex;
+}
+
+.circle {
+  height: 30px;
+  width: 30px;
+  border: 3px solid var(--primary-white);
+  border-radius: 50%;
+}
+
+.left {
+  transform: translateX(22%);
+}
+
+.right {
+  transform: translateX(-22%);
+}
+
+/* LoadingSpinner ---------------------------------------------------------------------------------- */
+
+.loading-container {
+  min-height: 100vh;
+  display: flex;
+}
+
+.placeholder-hashtags {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.placeholder-reactions {
+  height: 40px;
+}
+
+.post-placeholder {
+  margin: auto;
+}
+
+.my-border {
+  border-radius: 3px;
+}
+
+/* PostList ---------------------------------------------------------------------------------- */
+
 .post-list {
   margin-top: 50px;
 }
+
+/* Post ---------------------------------------------------------------------------------- */
 
 .reactions {
   display: flex;
@@ -40,10 +95,6 @@
     0px 30px 60px -30px rgba(0, 0, 0, 0.3);
   padding: 8px;
   width: 50%;
-}
-
-.post-placeholder {
-  margin: auto;
 }
 
 .badge {
@@ -74,29 +125,15 @@
   color: white;
 }
 
+/* Create Post ---------------------------------------------------------------------------------- */
+
 .create-post {
   width: 80%;
   margin-left: 10%;
   margin-top: 60px;
 }
 
-.placeholder-hashtags {
-  display: block;
-  margin-bottom: 20px;
-}
-
-.placeholder-reactions {
-  height: 40px;
-}
-
-.my-border {
-  border-radius: 3px;
-}
-
-.loading-container {
-  min-height: 100vh;
-  display: flex;
-}
+/* Footer ---------------------------------------------------------------------------------- */
 
 .footer {
   background-color: #212529;

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import MingleIcon from "../assets/mingle-icon.png";
 import { FiHome } from "react-icons/fi";
 import { CgAdd } from "react-icons/cg";
+import MingleLogo from "./MingleLogo";
 
 const Sidebar = ({ selectedTab, setSelectedTab }) => {
   return (
@@ -11,7 +11,7 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
       <a
         href="/"
         className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        <img src={MingleIcon} alt="mingle-logo" className="logo" />
+        <MingleLogo />
         <span className="fs-4">Mingle</span>
       </a>
       <hr />

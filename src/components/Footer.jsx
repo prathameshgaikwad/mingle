@@ -1,4 +1,4 @@
-import MingleIcon from "../assets/mingle-icon.png";
+import MingleLogo from "./MingleLogo";
 
 const Footer = () => {
   return (
@@ -10,11 +10,7 @@ const Footer = () => {
           <a
             href="/"
             className="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-            <img
-              src={MingleIcon}
-              alt="mingle-logo"
-              className="logo logo-footer"
-            />
+            <MingleLogo />
           </a>
           <span className="mb-3 mb-md-0 text-body-secondary copyright">
             &copy; 2023 Mingle, Inc
