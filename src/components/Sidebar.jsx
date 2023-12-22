@@ -11,7 +11,7 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
       <a
         href="/"
         className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        <MingleLogo />
+        <MingleLogo className="header-logo" />
         <span className="fs-4">Mingle</span>
       </a>
       <hr />
@@ -52,33 +52,8 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
             height="32"
             className="rounded-circle me-2"
           />
-          <strong>mdo</strong>
+          <strong>AuroraEcho76</strong>
         </a>
-        <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
-          <li>
-            <a className="dropdown-item" href="#">
-              New project...
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Settings
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Profile
-            </a>
-          </li>
-          <li>
-            <hr className="dropdown-divider" />
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Sign out
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   );
