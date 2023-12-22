@@ -19,10 +19,13 @@ const PostList = () => {
   }, []);
 
   return (
-    <div className="post-list">
+    <>
       {fetching && <LoadingSpinner />}
-      {!fetching && postList.map((post) => <Post key={post.id} post={post} />)}
-    </div>
+      <div className="post-list">
+        {!fetching &&
+          postList.map((post) => <Post key={post.id} post={post} />)}
+      </div>
+    </>
   );
 };
 

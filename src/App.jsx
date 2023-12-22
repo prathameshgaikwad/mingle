@@ -22,7 +22,6 @@ function App() {
           ) : (
             <CreatePost></CreatePost>
           )}
-
           <Footer />
         </div>
       </div>

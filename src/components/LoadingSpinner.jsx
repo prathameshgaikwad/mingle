@@ -1,7 +1,7 @@
 const LoadingSpinner = () => {
   return (
-    <>
-      <div className="card post ">
+    <div className="loading-container">
+      <div className="card post post-placeholder">
         <div className="card-body">
           <h5 className="card-title placeholder-glow">
             <span className="placeholder col-6 my-border"></span>
@@ -19,7 +19,7 @@ const LoadingSpinner = () => {
           </span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
