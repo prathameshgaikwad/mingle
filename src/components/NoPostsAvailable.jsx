@@ -20,9 +20,6 @@ const NoPostsAvailable = () => {
           />
         </svg>
         <h2 className="text-body message-title">You&apos;re all caught up!</h2>
-        <button className="btn btn-primary px-5 py-2" type="button">
-          Create A Post
-        </button>
       </div>
     </div>
   );
