@@ -10,7 +10,6 @@
 
 .app-container {
   display: flex;
-  min-height: 100vh;
 }
 
 .content {
@@ -48,11 +47,6 @@
 
 /* LoadingSpinner ---------------------------------------------------------------------------------- */
 
-.loading-container {
-  min-height: 100vh;
-  display: flex;
-}
-
 .placeholder-hashtags {
   display: block;
   margin-bottom: 20px;
@@ -63,7 +57,7 @@
 }
 
 .post-placeholder {
-  margin: auto;
+  margin-top: 60px !important;
 }
 
 .my-border {
@@ -144,9 +138,4 @@
 .copyright {
   color: whitesmoke !important;
   font-size: 1.2rem;
-}
-
-.logo-footer {
-  height: 50px;
-  width: 50px;
 }
