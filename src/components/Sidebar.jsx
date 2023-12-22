@@ -10,7 +10,8 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
       style={{ width: "220px", height: "100vh", position: "sticky", top: "0" }}>
       <a
         href="/"
-        className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+        style={{ gap: "5px" }}>
         <MingleLogo className="header-logo" />
         <span className="fs-4">Mingle</span>
       </a>
